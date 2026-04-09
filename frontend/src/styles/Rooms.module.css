@@ -1,0 +1,211 @@
+/* src/styles/Rooms.module.css */
+.page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #18181b;
+    margin: 0;
+}
+
+.addButton {
+    padding: 0.5rem 1rem;
+    background-color: #6366f1;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.addButton:hover {
+    background-color: #4f46e5;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.cardWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.editBtn {
+    flex: 1;
+    padding: 0.4rem;
+    font-size: 0.825rem;
+    font-weight: 500;
+    background: none;
+    border: 1px solid #d4d4d8;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #3f3f46;
+    transition: all 0.15s;
+}
+
+.editBtn:hover {
+    background-color: #f4f4f5;
+}
+
+.deleteBtn {
+    flex: 1;
+    padding: 0.4rem;
+    font-size: 0.825rem;
+    font-weight: 500;
+    background: none;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #dc2626;
+    transition: all 0.15s;
+}
+
+.deleteBtn:hover {
+    background-color: #fef2f2;
+}
+
+.empty {
+    color: #a1a1aa;
+    font-size: 0.95rem;
+}
+
+.error {
+    font-size: 0.875rem;
+    color: #ef4444;
+    margin: 0;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #71717a;
+}
+
+/* Modal */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.modal {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.modalTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #18181b;
+    margin: 0 0 1.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.field label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #3f3f46;
+}
+
+.field input,
+.field select {
+    padding: 0.6rem 0.85rem;
+    border: 1px solid #d4d4d8;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.field input:focus,
+.field select:focus {
+    border-color: #6366f1;
+}
+
+.modalActions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.cancelBtn {
+    flex: 1;
+    padding: 0.6rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: none;
+    border: 1px solid #d4d4d8;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #52525b;
+    transition: background-color 0.15s;
+}
+
+.cancelBtn:hover {
+    background-color: #f4f4f5;
+}
+
+.submitBtn {
+    flex: 1;
+    padding: 0.6rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submitBtn:hover:not(:disabled) {
+    background-color: #4f46e5;
+}
+
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

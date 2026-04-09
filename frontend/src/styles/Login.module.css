@@ -1,0 +1,118 @@
+/* src/styles/Login.module.css */
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f5;
+}
+
+.card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px;
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #18181b;
+    margin: 0;
+}
+
+.subtitle {
+    color: #71717a;
+    margin: 0.25rem 0 2rem;
+    font-size: 0.95rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.field label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #3f3f46;
+}
+
+.field input,
+.field select {
+    padding: 0.6rem 0.85rem;
+    border: 1px solid #d4d4d8;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.field input:focus,
+.field select:focus {
+    border-color: #6366f1;
+}
+
+.error {
+    font-size: 0.875rem;
+    color: #ef4444;
+    margin: 0;
+}
+
+.success {
+    font-size: 0.875rem;
+    color: #16a34a;
+    font-weight: 500;
+    margin: 0;
+}
+
+.button {
+    padding: 0.65rem;
+    background-color: #6366f1;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button:hover:not(:disabled) {
+    background-color: #4f46e5;
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.toggle {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #71717a;
+    margin: 1.25rem 0 0;
+}
+
+.toggleBtn {
+    background: none;
+    border: none;
+    color: #6366f1;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+}
+
+.toggleBtn:hover {
+    text-decoration: underline;
+}
