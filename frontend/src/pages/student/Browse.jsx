@@ -21,7 +21,8 @@ export default function Browse() {
                 api.get('/rooms/'),
                 api.get('/allocations/my'),
             ])
-            setRooms(roomsRes.data)
+            const sorted = roomsRes.data.sort((a, b) => a.room_number.localeCompare(b.room_number))
+            setRooms(sorted)
             const hasPending = requestsRes.data.some(r => r.status === 'pending')
             setHasRequest(hasPending)
         } catch {

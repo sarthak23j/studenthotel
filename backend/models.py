@@ -36,6 +36,7 @@ class Room(Base):
     room_number = Column(String, unique=True, nullable=False)
     floor = Column(Integer, nullable=False)
     capacity = Column(Integer, nullable=False)
+    occupancy = Column(Integer, default=0, nullable=False)
     status = Column(Enum(RoomStatus), default=RoomStatus.available)
 
     requests = relationship("AllocationRequest", back_populates="room")

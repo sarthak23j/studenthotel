@@ -26,6 +26,10 @@ export default function RoomCard({ room, onAction, actionLabel, disabled }) {
                     <span className={styles.label}>Capacity</span>
                     <span className={styles.value}>{room.capacity} bed{room.capacity > 1 ? 's' : ''}</span>
                 </div>
+                <div className={styles.detail}>
+                    <span className={styles.label}>Occupancy</span>
+                    <span className={styles.value}>{room.occupancy}/{room.capacity}</span>
+                </div>
             </div>
 
             {onAction && (

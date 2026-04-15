@@ -60,6 +60,7 @@ class RoomResponse(BaseModel):
     room_number: str
     floor: int
     capacity: int
+    occupancy: int
     status: RoomStatus
 
     class Config:
@@ -74,6 +75,7 @@ class RoomNested(BaseModel):
     room_number: str
     floor:       int
     capacity:    int
+    occupancy:   int
     status:      RoomStatus
 
     class Config:

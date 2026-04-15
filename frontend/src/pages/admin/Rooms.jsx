@@ -21,7 +21,8 @@ export default function Rooms() {
     async function fetchRooms() {
         try {
             const res = await api.get('/rooms/')
-            setRooms(res.data)
+            const sorted = res.data.sort((a, b) => a.room_number.localeCompare(b.room_number))
+            setRooms(sorted)
         } catch {
             setError('Failed to load rooms')
         } finally {

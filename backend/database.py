@@ -6,9 +6,9 @@ import os
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+AZURE_DATABASE_URL = os.getenv("AZURE_DATABASE_URL")
 
-engine = create_engine(DATABASE_URL)
+engine = create_engine(AZURE_DATABASE_URL)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
